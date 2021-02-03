@@ -1,3 +1,4 @@
+{% extends 'portfolio/base.html' %}
 {% block content %}
 <!DOCTYPE html>
 <html lang="en">
@@ -45,8 +46,8 @@
                     <td>{{ customer.zipcode }}</td>
                     <td>{{ customer.email }}</td>
                     <td>{{ customer.cell_phone }}</td>
-                    <td><a href="#" class="btn btn-warning">Edit</a>
-                     <td><a href="#"></a>
+                    <td><a href="{% url 'customer_update' pk=customer.pk %}" class="btn btn-warning">Edit</a>
+                     <td><a href="{% url 'customer_delete' pk=customer.pk %}" class="btn btn-danger">Delete</a>
                     </td>
                     <td><a href="#" class="btn btn-primary">Portfolio</a>
 
